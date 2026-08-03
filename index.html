@@ -1,17 +1,488 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dokola</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Festival Dokola 2026 — Cirkulární ekonomika v praxi</title>
+<meta name="description" content="10.–11. září 2026 | Kampus Hybernská, Praha. Jediný festival svého druhu v ČR. Dva dny věnované cirkularitě, udržitelnosti a českým inovacím.">
+<meta property="og:title" content="Festival Dokola 2026">
+<meta property="og:description" content="10.–11. září 2026 | Kampus Hybernská, Praha. Cirkulární ekonomika konečně mezi lidi.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Archivo+Narrow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
 </head>
 <body>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Toto je stránka Dokola</h1>
-      <p>Dejme ji dohromady</p>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><img src="img/brand/dokola-logo-nav.png" alt="Festival Dokola"></a>
+    <button class="burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navlinks">
+      <a href="#program">Program</a>
+      <a href="#speakeri">Speakeři</a>
+      <a href="#vstupenky">Registrace</a>
+      <a href="pro-vystavovatele.html">Pro vystavovatele</a>
+      <a href="pro-skoly.html">Pro školy</a>
+      <a href="pro-partnery.html">Pro partnery</a>
+      <a href="#vstupenky" class="cta">Připravujeme registraci</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">📍 Kampus Hybernská, Praha · <b>10.–11. září 2026</b></div>
+      <h1>Festival <span class="turn">Dokola</span><br><span class="sub">Dva dny, kdy cirkularita ožije.</span></h1>
+      <p class="lead">Jediný festival svého druhu v ČR. Přijďte si zažít, jak vypadá cirkulární ekonomika v praxi, inspirovat se, potkat lidi, co tvoří produkty a řešení, které myslí na naši budoucnost, a odejdete s nápady, co změnit u sebe doma nebo ve firmě.</p>
+      <div class="meta-row">
+        <span><span class="ic">●</span> Vstup zdarma</span>
+        <span><span class="ic">●</span> Program pro celou rodinu</span>
+        <span><span class="ic">●</span> Osobnosti cirkularity</span>
+      </div>
+      <div class="btns">
+        <a href="#vstupenky" class="btn btn-soon"><span class="tag">Brzy</span> Registrace na workshopy a přednášky</a>
+        <a href="#program" class="btn btn-ghost">Co se bude dít →</a>
+      </div>
     </div>
-  </section>
+    <div class="ring-stage">
+      <span class="blob o"></span><span class="blob t"></span>
+      <div class="ring" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circ" d="M100,100 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0"/></defs>
+          <text font-family="Archivo Narrow" font-weight="500" font-size="13" letter-spacing="2.5" fill="var(--ink)">
+            <textPath href="#circ" startOffset="0">FESTIVAL DOKOLA · CIRKULÁRNÍ EKONOMIKA NAŽIVO · </textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="ring-orbit ring-orbit--a" aria-hidden="true"><span class="ring-dot ring-dot--teal"></span></div>
+      <div class="ring-orbit ring-orbit--b" aria-hidden="true"><span class="ring-dot ring-dot--orange"></span></div>
+      <div class="ring-core">
+        <span class="big">10.–11. 9.</span>
+        <small>2026</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAG STRIP -->
+<div class="tagstrip" aria-hidden="true">
+  <div class="scroller">
+    <b>Přednášky</b><b>Workshopy</b><b>Debaty</b><b>Výstava</b><b>Swap</b><b>Dílna</b><b>Networking</b><b>Módní přehlídka</b><b>Kulatý stůl</b>
+    <b>Přednášky</b><b>Workshopy</b><b>Debaty</b><b>Výstava</b><b>Swap</b><b>Dílna</b><b>Networking</b><b>Módní přehlídka</b><b>Kulatý stůl</b>
+  </div>
+</div>
+
+<!-- CO SE BUDE DÍT -->
+<section id="co-se-bude-dit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Dva dny nabité programem</span>
+      <h2>Co se bude dít</h2>
+    </div>
+    <div class="grid-acts">
+      <div class="act reveal"><span class="corner"></span><div class="n">Přednášky a debaty</div><h3>Principy v praxi</h3><p>Inovativní řešení a příklady dobré praxe z ČR i ze zahraničí, podané srozumitelně.</p></div>
+      <div class="act reveal"><span class="corner"></span><div class="n">Workshopy</div><h3>Vyzkoušíte si to</h3><p>Praktické dílny — upcyklace, vaření ze zbytků, opravy, DIY. Odejdete s dovedností.</p></div>
+      <div class="act reveal"><span class="corner"></span><div class="n">Výstava</div><h3>Česká cirkulární řešení</h3><p>Produkty a projekty firem, které dokazují, že cirkularita funguje. Postavená z znovu-použitých materiálů.</p></div>
+      <div class="act reveal"><span class="corner"></span><div class="n">Swap &amp; bazar</div><h3>Přines a vyměň</h3><p>Oblečení, co už nenosíte, dostane druhý život. Komunitní swap a bazar.</p></div>
+      <div class="act reveal"><span class="corner"></span><div class="n">Otevřená dílna</div><h3>Opravíme to spolu</h3><p>Prostor pro opravy a úpravy věcí pod vedením odborníků. Po celou dobu festivalu.</p></div>
+      <div class="act reveal"><span class="corner"></span><div class="n">Módní přehlídka</div><h3>Z odpadu na molo</h3><p>Oblečení z recyklovaných a upcyklovaných materiálů. Udržitelnost, která vypadá dobře.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT STRIP -->
+<div class="support-strip">
+  <div class="wrap">
+    <img src="img/partners/praha.png" alt="Hlavní město Praha">
+    <span>Festival vzniká za podpory hlavního města Prahy</span>
+  </div>
+</div>
+
+<!-- PROGRAM -->
+<section id="program" class="program">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Harmonogram</span>
+      <h2>Program festivalu</h2>
+      <p style="opacity:.8">Vyberte si den a klidně si program filtrujte podle toho, co vás zajímá.</p>
+    </div>
+
+    <div class="prog-tabs" role="tablist" aria-label="Den festivalu">
+      <button class="pt active" data-day="ct" type="button">Čtvrtek 10. 9.</button>
+      <button class="pt" data-day="pa" type="button">Pátek 11. 9.</button>
+    </div>
+
+    <div class="prog-filters" role="group" aria-label="Filtrovat program podle typu">
+      <button class="pf active" data-cat="all" type="button">Vše</button>
+      <button class="pf cat-workshop" data-cat="workshop" type="button">✂️ Workshopy</button>
+      <button class="pf cat-prednaska" data-cat="prednaska" type="button">🎤 Přednášky</button>
+      <button class="pf cat-debata" data-cat="debata" type="button">💬 Debaty</button>
+      <button class="pf cat-vystava" data-cat="vystava" type="button">💡 Výstava</button>
+      <button class="pf cat-swap" data-cat="swap" type="button">👕 Swap</button>
+      <button class="pf cat-dilna" data-cat="dilna" type="button">🔧 Dílna</button>
+      <button class="pf cat-moda" data-cat="moda" type="button">📸 Módní přehlídka</button>
+      <button class="pf cat-dalsi" data-cat="dalsi" type="button">✦ Další</button>
+    </div>
+
+    <div class="prog-day" data-day="ct">
+      <details class="prog-item" data-cat="workshop">
+        <summary><span class="pi-time">9:00–12:00</span><span class="pi-cat cat-workshop">✂️ Workshop</span><span class="pi-title">Kompost a kávová sedlina <small>(pro školy)</small></span><span class="pi-place">📍 Dílna</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> ReKáva + Kokoza</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="debata">
+        <summary><span class="pi-time">9:30</span><span class="pi-cat cat-debata">💬 Debata</span><span class="pi-title">Roundtable: CE ve veřejném zadávání</span><span class="pi-place">📍 Zasedačka</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> PII, INCIEN</p><p style="opacity:.75;font-size:.9rem">Uzavřená akce, jen na pozvánky.</p></div>
+      </details>
+      <details class="prog-item" data-cat="prednaska">
+        <summary><span class="pi-time">10:00</span><span class="pi-cat cat-prednaska">🎤 Přednáška</span><span class="pi-title">Od odpadu k oběhu – Úvod do cirkulární ekonomiky <small>(pro školy)</small></span><span class="pi-place">📍 Hub</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> INCIEN</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="prednaska">
+        <summary><span class="pi-time">11:00</span><span class="pi-cat cat-prednaska">🎤 Přednáška</span><span class="pi-title">Jak vypadá cirkulární obec?</span><span class="pi-place">📍 Hub</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> CE HUB Pardubice</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="prednaska">
+        <summary><span class="pi-time">14:00</span><span class="pi-cat cat-prednaska">🎤 Přednáška</span><span class="pi-title">Je Praha cirkulární?</span><span class="pi-place">📍 Hub</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Pavla Antonínová</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="dilna">
+        <summary><span class="pi-time">14:00–18:00</span><span class="pi-cat cat-dilna">🔧 Dílna</span><span class="pi-title">Open dílna – nábytek &amp; opravy</span><span class="pi-place">📍 Dílna</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Kampus dílna</p><p style="opacity:.75;font-size:.9rem">Volně přístupné a zdarma, ale doporučujeme rezervaci.</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="debata">
+        <summary><span class="pi-time">15:00</span><span class="pi-cat cat-debata">💬 Debata</span><span class="pi-title">Je Praha cirkulární? – diskuze</span><span class="pi-place">📍 Hub</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p>Navazuje na předchozí přednášku Pavly Antonínové.</p></div>
+      </details>
+      <details class="prog-item" data-cat="workshop">
+        <summary><span class="pi-time">15:00–16:00</span><span class="pi-cat cat-workshop">✂️ Workshop</span><span class="pi-title">Konzultace stylingu ze sekáče</span><span class="pi-place">📍 Garáž</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Jana Horejšová (On the Boat)</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="workshop">
+        <summary><span class="pi-time">15:00–17:00</span><span class="pi-cat cat-workshop">✂️ Workshop</span><span class="pi-title">Řízený workshop – nábytek <small>(300 Kč)</small></span><span class="pi-place">📍 Dílna</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Kampus dílna</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="prednaska">
+        <summary><span class="pi-time">16:00</span><span class="pi-cat cat-prednaska">🎤 Přednáška</span><span class="pi-title">Jak ovlivňuji svět tím, co nakupuji</span><span class="pi-place">📍 Hub</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Nataša Foltánová</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="workshop">
+        <summary><span class="pi-time">17:00</span><span class="pi-cat cat-workshop">✂️ Workshop</span><span class="pi-title">Šití &amp; přešívání <small>(veřejnost)</small></span><span class="pi-place">📍 Dílna</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Vedu Clothing (Veronika Dušková)</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="debata">
+        <summary><span class="pi-time">18:00–19:00</span><span class="pi-cat cat-debata">💬 Debata</span><span class="pi-title">Let's Get Circular <small>(talkshow)</small></span><span class="pi-place">📍 Hub</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Jitka Nováčková (moderátorka), Simona Babčáková, Soňa Klepek Jonášová a další</p></div>
+      </details>
+      <details class="prog-item" data-cat="moda">
+        <summary><span class="pi-time">19:00</span><span class="pi-cat cat-moda">📸 Móda</span><span class="pi-title">Přehlídka upcyklované módy</span><span class="pi-place">📍 Dvůr / Garáž</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Jana Horejšová, Kamila Vodochodská a další</p></div>
+      </details>
+      <details class="prog-item" data-cat="dalsi">
+        <summary><span class="pi-time">Celý den</span><span class="pi-cat cat-dalsi">✦ Další</span><span class="pi-title">Promítání Cirkademie</span><span class="pi-place">📍 upřesníme</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p style="opacity:.75;font-size:.9rem">Čas a místo upřesníme.</p></div>
+      </details>
+      <details class="prog-item" data-cat="dalsi">
+        <summary><span class="pi-time">Celý den</span><span class="pi-cat cat-dalsi">✦ Další</span><span class="pi-title">Promítání minisérie Od Odpadu k pokladu</span><span class="pi-place">📍 upřesníme</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p style="opacity:.75;font-size:.9rem">Čas a místo upřesníme.</p></div>
+      </details>
+      <details class="prog-item" data-cat="dalsi">
+        <summary><span class="pi-time">Celý den</span><span class="pi-cat cat-dalsi">✦ Další</span><span class="pi-title">Přesazování kytek</span><span class="pi-place">📍 Dvůr</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Kokoza</p></div>
+      </details>
+      <details class="prog-item" data-cat="dalsi">
+        <summary><span class="pi-time">Celý den</span><span class="pi-cat cat-dalsi">✦ Další</span><span class="pi-title">Polytechnická dílna</span><span class="pi-place">📍 Dvůr</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p style="opacity:.75;font-size:.9rem">Čas upřesníme.</p></div>
+      </details>
+      <details class="prog-item" data-cat="dalsi">
+        <summary><span class="pi-time">20:00</span><span class="pi-cat cat-dalsi">✦ Další</span><span class="pi-title">Večírek INCIEN</span><span class="pi-place">📍 upřesníme</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p>Slavnostní večer pro zvané hosty, partnery a přátele — reflexe 11 let cirkularity v Česku.</p></div>
+      </details>
+    </div>
+
+    <div class="prog-day" data-day="pa" hidden>
+      <details class="prog-item" data-cat="workshop">
+        <summary><span class="pi-time">9:00–12:00</span><span class="pi-cat cat-workshop">✂️ Workshop</span><span class="pi-title">Kompost a kávová sedlina <small>(pro školy)</small></span><span class="pi-place">📍 Dílna</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> ReKáva + Kokoza</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="prednaska">
+        <summary><span class="pi-time">10:00</span><span class="pi-cat cat-prednaska">🎤 Přednáška</span><span class="pi-title">Od odpadu k oběhu – Úvod do cirkulární ekonomiky <small>(pro školy)</small></span><span class="pi-place">📍 Hub</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> INCIEN</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="prednaska">
+        <summary><span class="pi-time">11:00</span><span class="pi-cat cat-prednaska">🎤 Přednáška</span><span class="pi-title">Vysypali jsme vaše koše — co se děje s odpady?</span><span class="pi-place">📍 Hub</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Broňa (Pražské služby)</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="prednaska">
+        <summary><span class="pi-time">14:00</span><span class="pi-cat cat-prednaska">🎤 Přednáška</span><span class="pi-title">10 důvodů proč být cirkulární</span><span class="pi-place">📍 Hub</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> INCIEN</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="dilna">
+        <summary><span class="pi-time">14:00</span><span class="pi-cat cat-dilna">🔧 Dílna</span><span class="pi-title">Open dílna – elektronika</span><span class="pi-place">📍 Dílna</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Kampus dílna</p><p style="opacity:.75;font-size:.9rem">Volně přístupné a zdarma, ale doporučujeme rezervaci.</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="workshop">
+        <summary><span class="pi-time">15:00–16:00</span><span class="pi-cat cat-workshop">✂️ Workshop</span><span class="pi-title">Konzultace stylingu ze sekáče</span><span class="pi-place">📍 Garáž</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Jana Horejšová (On the Boat)</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="workshop">
+        <summary><span class="pi-time">15:00–17:00</span><span class="pi-cat cat-workshop">✂️ Workshop</span><span class="pi-title">Řízený workshop – elektronika <small>(300 Kč)</small></span><span class="pi-place">📍 Dílna</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Kampus dílna</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="prednaska">
+        <summary><span class="pi-time">16:00</span><span class="pi-cat cat-prednaska">🎤 Přednáška</span><span class="pi-title">Jak poznat greenwashing</span><span class="pi-place">📍 Hub</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> řečníka upřesníme</p></div>
+      </details>
+      <details class="prog-item" data-cat="dilna">
+        <summary><span class="pi-time">16:00</span><span class="pi-cat cat-dilna">🔧 Dílna</span><span class="pi-title">Kimchi <small>(open dílna)</small></span><span class="pi-place">📍 Dílna</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Kokoza</p><p style="opacity:.75;font-size:.9rem">Volně přístupné a zdarma, ale doporučujeme rezervaci.</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="workshop">
+        <summary><span class="pi-time">17:00</span><span class="pi-cat cat-workshop">✂️ Workshop</span><span class="pi-title">Vařící workshop – zero waste kuchyně</span><span class="pi-place">📍 Dílna</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Roman Stáša</p><a href="#vstupenky" class="btn btn-soon btn-sm"><span class="tag">Brzy</span> Registrace</a></div>
+      </details>
+      <details class="prog-item" data-cat="debata">
+        <summary><span class="pi-time">18:30</span><span class="pi-cat cat-debata">💬 Debata</span><span class="pi-title">Stand-up na cirkulární ekonomiku</span><span class="pi-place">📍 místo upřesníme</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Tady Tali</p></div>
+      </details>
+      <details class="prog-item" data-cat="dalsi">
+        <summary><span class="pi-time">Celý den</span><span class="pi-cat cat-dalsi">✦ Další</span><span class="pi-title">Promítání Cirkademie</span><span class="pi-place">📍 upřesníme</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p style="opacity:.75;font-size:.9rem">Čas a místo upřesníme.</p></div>
+      </details>
+      <details class="prog-item" data-cat="dalsi">
+        <summary><span class="pi-time">Celý den</span><span class="pi-cat cat-dalsi">✦ Další</span><span class="pi-title">Promítání minisérie Od Odpadu k pokladu</span><span class="pi-place">📍 upřesníme</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p style="opacity:.75;font-size:.9rem">Čas a místo upřesníme.</p></div>
+      </details>
+      <details class="prog-item" data-cat="dalsi">
+        <summary><span class="pi-time">Celý den</span><span class="pi-cat cat-dalsi">✦ Další</span><span class="pi-title">Přesazování kytek</span><span class="pi-place">📍 Dvůr</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p><b>Kdo:</b> Kokoza</p></div>
+      </details>
+      <details class="prog-item" data-cat="dalsi">
+        <summary><span class="pi-time">Celý den</span><span class="pi-cat cat-dalsi">✦ Další</span><span class="pi-title">Polytechnická dílna</span><span class="pi-place">📍 Dvůr</span><span class="pi-arrow">＋</span></summary>
+        <div class="pi-body"><p style="opacity:.75;font-size:.9rem">Čas upřesníme.</p></div>
+      </details>
+    </div>
+
+    <p class="prog-note">Program průběžně doplňujeme a upřesňujeme. Sledujte nás.</p>
+  </div>
+</section>
+
+<!-- PROČ -->
+<section class="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Proč Dokola</span>
+      <h2>Cirkularita se hůř vysvětluje na slidu v prezentaci.</h2>
+      <p>Mnohem líp se zažije — když si osaháte materiály, vyzkoušíte principy na vlastní kůži a poslechnete si lidi, kteří se tématu věnují každý den. Chceme propojit ty, které spojuje jedno: přesvědčení, že věci můžou fungovat dokola, ne jednosměrně. Protože cirkularita není obor ani teorie z konferencí. Je to způsob, jak přemýšlet o světě a o tom, co po sobě necháme.</p>
+    </div>
+    <div class="cols">
+      <div class="myth cross reveal">
+        <span class="badge">Mýtus</span>
+        <h3 style="margin-top:12px">Téma pro vědce a odborníky.</h3>
+        <p>Cirkulární ekonomika bývá vnímaná jako něco vědeckého a technicistního — téma do odborných konferencí a strategických dokumentů, které se běžného člověka netýká.</p>
+      </div>
+      <div class="myth true reveal">
+        <span class="badge">Opak je pravdou</span>
+        <h3 style="margin-top:12px">Dotýká se každého z nás. Každý den.</h3>
+        <p>Je v každodenních rozhodnutích. V tom, co uděláme se starým svetrem, se zbytky večeře, z čeho se rozhodneme vyrobit nový produkt nebo od koho objednáme nábytek do kanceláře. Festival Dokola je oslava přesně tohohle - oslava změny myšlení, návratu k selskému rozumu a radosti z inovací.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKEŘI -->
+<section id="speakeri">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Kdo vystoupí</span>
+      <h2>Speakeři a hosté</h2>
+      <p>Postupně odhalujeme jména lidí, kteří cirkularitu nejen znají, ale žijí.</p>
+    </div>
+    <div class="spk-grid">
+      <div class="spk reveal"><div class="ph"><img src="img/speakers/jitka-novackova.jpg" alt="Jitka Nováčková"></div><h3>Jitka Nováčková</h3><p>Moderátorka talkshow Let's Get Circular</p></div>
+      <div class="spk reveal"><div class="ph"><img src="img/speakers/simona-babcakova.jpg" alt="Simona Babčáková"></div><h3>Simona Babčáková</h3><p>Hostka talkshow Let's Get Circular</p></div>
+      <div class="spk reveal"><div class="ph"><img src="img/speakers/sona-klepek-jonasova.png" alt="Soňa Klepek Jonášová"></div><h3>Soňa Klepek Jonášová</h3><p>Hostka talkshow Let's Get Circular</p></div>
+      <div class="spk reveal"><div class="ph"><img src="img/speakers/pavla-antoninova.jpg" alt="Pavla Antonínová"></div><h3>Pavla Antonínová</h3><p>Přednáška: Je Praha cirkulární?</p></div>
+      <div class="spk reveal"><div class="ph"><img src="img/speakers/natasa-foltanova.jpg" alt="Nataša Foltánová"></div><h3>Nataša Foltánová</h3><p>Přednáška: Jak ovlivňuji svět tím, co nakupuji</p></div>
+      <div class="spk reveal"><div class="ph"><img src="img/speakers/jana-horejsova.jpg" alt="Jana Horejšová"></div><h3>Jana Horejšová</h3><p>On the Boat · styling ze sekáče &amp; přehlídka</p></div>
+      <div class="spk reveal"><div class="ph"><img src="img/speakers/kamila-vodochodska.jpg" alt="Kamila Vodochodská"></div><h3>Kamila Vodochodská</h3><p>Móda z upcyklovaných materiálů</p></div>
+      <div class="spk reveal"><div class="ph"><img src="img/speakers/veronika-duskova.jpg" alt="Veronika Dušková"></div><h3>Veronika Dušková</h3><p>Vedu Clothing · šití &amp; přešívání</p></div>
+    </div>
+    <div class="spk-note reveal">✦ Lineup průběžně doplňujeme. Chcete vystoupit nebo máte tip na hosta? <a href="#kontakt" style="color:var(--teal-deep);font-weight:600">Ozvěte se nám.</a></div>
+  </div>
+</section>
+
+<!-- VSTUPENKY -->
+<section id="vstupenky" class="tickets">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Jak se dostat dovnitř</span>
+      <h2>Vstupenky &amp; rezervace</h2>
+      <p>Festival je v jádru zdarma. U aktivit s omezenou kapacitou si zarezervujete místo, ať máme přehled a vy máte jistotu.</p>
+    </div>
+    <div class="tk-grid">
+      <div class="tk lead reveal">
+        <span class="pill">Lístek</span>
+        <div class="price">Workshopy <small>· placené</small></div>
+        <h3>Rezervace místa lístkem</h3>
+        <p>Praktické dílny mají omezenou kapacitu. Lístek vám drží místo a pokrývá materiál. Prodej spustíme přes GoOut.</p>
+      </div>
+      <div class="tk free reveal">
+        <span class="pill">Zdarma · rezervace</span>
+        <div class="price">Přednášky, dílna <small>· prohlídky</small></div>
+        <h3>Bezplatná rezervace</h3>
+        <p>Na přednášky, otevřenou dílnu, talkshow a komentované prohlídky si zdarma zarezervujete místo. Není to povinné, ale pomůže nám to s kapacitou — a vám připomene přijít.</p>
+      </div>
+      <div class="tk open reveal">
+        <span class="pill">Volně přístupné</span>
+        <div class="price">Swap <small>· výstava</small></div>
+        <h3>Bez registrace</h3>
+        <p>Swap, výstava a festivalová atmosféra jsou volně přístupné. Prostě dorazte.</p>
+      </div>
+    </div>
+    <div class="cta-row reveal">
+      <h3>Vstupenky a rezervace spouštíme přes GoOut</h3>
+      <p>Workshopy i bezplatné rezervace najdete na jednom místě. Připravujeme — jakmile bude spuštěno, objeví se tu tlačítko a dáme vědět na sociálních sítích.</p>
+      <a class="btn btn-soon"><span class="tag">Brzy</span> Odkaz na GoOut připravujeme</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRO KOHO -->
+<section id="pro-koho">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Chcete být u toho — víc než jako návštěvníci?</span>
+      <h2>Zapojte se</h2>
+      <p>Cirkularita je o spolupráci. Pokud máte produkt, téma nebo nápad, který do festivalu zapadá, máme pro vás místo.</p>
+    </div>
+    <div class="audience">
+      <a href="pro-vystavovatele.html" class="aud reveal">
+        <div class="ic">🏷️</div>
+        <h3>Pro vystavovatele</h3>
+        <p>Ukažte své cirkulární řešení přímo v proudu festivalu — na výstavě postavené ze znovu-použitých materiálů.</p>
+        <span class="go">Detaily pro firmy →</span>
+      </a>
+      <a href="pro-skoly.html" class="aud reveal">
+        <div class="ic">🎒</div>
+        <h3>Pro školy</h3>
+        <p>Přiveďte třídu na program šitý na míru žákům a studentům. Přednášky, výstava, dílna i materiály do výuky.</p>
+        <span class="go">Detaily pro školy →</span>
+      </a>
+      <a href="pro-partnery.html" class="aud reveal">
+        <div class="ic">🤝</div>
+        <h3>Pro partnery</h3>
+        <p>Staňte se součástí děje, ne logem v rohu. Od podpory přes zapojení do programu až po vlastní téma na pódiu.</p>
+        <span class="go">Detaily pro partnery →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNEŘI -->
+<section id="partneri" class="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Děkujeme</span>
+      <h2>Partneři festivalu</h2>
+      <p>Festival vzniká díky lidem a organizacím, kteří to s cirkularitou myslí vážně.</p>
+    </div>
+    <div class="logos">
+      <div class="logo-real logo-real--lg reveal"><img src="img/partners/praha.png" alt="Hlavní město Praha"></div>
+      <div class="logo-real reveal"><img src="img/partners/kampus-hybernska.png" alt="Kampus Hybernská"></div>
+      <div class="logo-real reveal"><img src="img/partners/pii.png" alt="PII"></div>
+      <div class="logo-real reveal"><img src="img/partners/zmena-k-lepsimu.png" alt="Změna k lepšímu"></div>
+    </div>
+    <p style="text-align:center;margin-top:24px;opacity:.8">Festival Dokola 2026 vzniká za podpory hl. m. Prahy.</p>
+  </div>
+</section>
+
+<!-- ORGANIZÁTOŘI -->
+<section id="organizatori" class="org">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Kdo za tím stojí</span>
+      <h2>Organizátoři</h2>
+    </div>
+    <div class="org-lead reveal">
+      <div class="mark"><img src="img/brand/incien-logo.png" alt="INCIEN"></div>
+      <div>
+        <h3>INCIEN — Institut Cirkulární Ekonomiky</h3>
+        <p>Lídr tématu cirkularity v ČR, který letos slaví 11 let. Od dat a strategických konzultací po vzdělávání a osvětu — INCIEN dostává cirkularitu do médií, měst i firem. <a href="https://www.incien.org" target="_blank" rel="noopener" style="color:var(--teal-deep);font-weight:600">Web INCIEN →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÍSTO + KONTAKT -->
+<section id="kontakt">
+  <div class="wrap">
+    <div class="venue-grid">
+      <div class="venue-card reveal">
+        <span class="eyebrow">Místo konání</span>
+        <h3 style="margin-top:10px">Kampus Hybernská</h3>
+        <p>Hybernská 998/4, 110 00 Praha — Nové Město</p>
+        <p>Prostor v centru města, který sám žije principy cirkularity: upcyklovaný nábytek, recyklované materiály, efektivní hospodaření s vodou.</p>
+        <a class="maplink" href="https://maps.google.com/maps?q=Hybernsk%C3%A1+4+Praha" target="_blank" rel="noopener">Otevřít v Mapách →</a>
+      </div>
+      <div class="venue-card contact-card reveal">
+        <span class="eyebrow">Kontakt</span>
+        <h3 style="margin-top:10px">Ozvěte se nám</h3>
+        <div class="contact-line"><span>✉️</span><a href="mailto:karolina.kocendova@incien.org">karolina.kocendova@incien.org</a></div>
+        <div class="contact-line"><span>📞</span><a href="tel:+420725600876">725 600 876</a></div>
+        <div class="contact-line"><span>🙋</span><span>Karolína Kočendová</span></div>
+        <p style="opacity:.8;margin-top:14px;font-size:.95rem">Chcete vystavovat, přivést školu, být partnerem nebo máte vlastní nápad? Napište — cirkularita je o spolupráci.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <a href="index.html" class="brand brand-footer"><img src="img/brand/dokola-logo-footer.png" alt="Festival Dokola"></a>
+      <p class="foot-note">Pořádá INCIEN — Institut Cirkulární Ekonomiky · 10.–11. září 2026 · Kampus Hybernská, Praha</p>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/incien.org" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+      <a href="https://www.instagram.com/dokola_festival/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+      <a href="https://www.linkedin.com/company/institut-cirkul%C3%A1rn%C3%AD-ekonomiky-z-%C3%BA-/" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile menu
+  const b=document.getElementById('burger'),n=document.getElementById('navlinks');
+  b.addEventListener('click',()=>n.classList.toggle('open'));
+  n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')));
+  // reveal on scroll
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // program: day tabs
+  const dayTabs=document.querySelectorAll('.pt'),dayPanels=document.querySelectorAll('.prog-day');
+  dayTabs.forEach(t=>t.addEventListener('click',()=>{
+    dayTabs.forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    dayPanels.forEach(p=>p.hidden=(p.dataset.day!==t.dataset.day));
+  }));
+
+  // program: category filter
+  const filterBtns=document.querySelectorAll('.pf');
+  filterBtns.forEach(f=>f.addEventListener('click',()=>{
+    filterBtns.forEach(x=>x.classList.remove('active'));
+    f.classList.add('active');
+    const cat=f.dataset.cat;
+    document.querySelectorAll('.prog-item').forEach(item=>{
+      item.style.display=(cat==='all'||item.dataset.cat===cat)?'':'none';
+    });
+  }));
+</script>
 </body>
 </html>
