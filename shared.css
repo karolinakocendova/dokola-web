@@ -11,7 +11,7 @@
   --r:18px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
 body{
   font-family:"Archivo Narrow",system-ui,sans-serif;
   color:var(--ink);
@@ -19,6 +19,7 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
+  max-width:100%;
 }
 h1,h2,h3,h4,.display{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.02;letter-spacing:-.02em;font-weight:800}
 a{color:inherit}
@@ -181,6 +182,8 @@ section{padding:84px 0}
 .pi-body p{font-size:.94rem;opacity:.9}
 .btn-sm{padding:9px 16px;font-size:.88rem}
 .prog-note{margin-top:22px;text-align:center;opacity:.7;font-size:.95rem}
+.prog-more{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:6px;padding:14px;background:rgba(251,246,234,.06);border:1px dashed rgba(251,246,234,.3);border-radius:14px;color:var(--cream);font-family:"Archivo Narrow";font-weight:600;font-size:.94rem;cursor:pointer;transition:.18s}
+.prog-more:hover{background:rgba(251,246,234,.12)}
 @media(max-width:760px){
   .prog-item summary{grid-template-columns:1fr 30px;grid-template-areas:"time arrow" "cat cat" "title title" "place place";row-gap:8px}
   .pi-time{grid-area:time}
@@ -203,6 +206,7 @@ section{padding:84px 0}
 /* VSTUPENKY */
 .tickets{background:var(--cream-deep)}
 .tickets .sec-head h2{white-space:nowrap;max-width:none}
+@media(max-width:560px){.tickets .sec-head h2{white-space:normal}}
 .tk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:28px}
 .tk{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column}
 .tk.lead{border-color:var(--orange);box-shadow:var(--shadow)}

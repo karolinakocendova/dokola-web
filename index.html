@@ -271,6 +271,7 @@
         <summary><span class="pi-time">20:00</span><span class="pi-cat cat-dalsi">✦ Další</span><span class="pi-title">Večírek INCIEN</span><span class="pi-place"></span><span class="pi-arrow">＋</span></summary>
         <div class="pi-body"><p>Slavnostní večer pro zvané hosty, partnery a přátele — reflexe 11 let cirkularity v Česku.</p></div>
       </details>
+      <button class="prog-more" type="button">Zobrazit další body programu ↓</button>
     </div>
 
     <div class="prog-day" data-day="pa" hidden>
@@ -385,6 +386,7 @@
           <p style="opacity:.75;font-size:.9rem">Volně přístupné a zdarma. Čas upřesníme.</p>
         </div>
       </details>
+      <button class="prog-more" type="button">Zobrazit další body programu ↓</button>
     </div>
 
     <p class="prog-note">Program průběžně doplňujeme a upřesňujeme. Sledujte nás.</p>
@@ -595,16 +597,38 @@
     dayPanels.forEach(p=>p.hidden=(p.dataset.day!==t.dataset.day));
   }));
 
-  // program: category filter
+  // program: category filter + show-more (first 5 per day when unfiltered)
+  const PROG_VISIBLE=5;
   const filterBtns=document.querySelectorAll('.pf');
+  function applyProgramVisibility(){
+    const activeCat=(document.querySelector('.pf.active')||{}).dataset?.cat||'all';
+    dayPanels.forEach(day=>{
+      const items=Array.from(day.querySelectorAll('.prog-item'));
+      const matching=items.filter(it=>activeCat==='all'||it.dataset.cat===activeCat);
+      const showAll=activeCat!=='all'||day.classList.contains('show-all');
+      items.forEach(it=>{
+        const isMatch=activeCat==='all'||it.dataset.cat===activeCat;
+        const idx=matching.indexOf(it);
+        it.style.display=(!isMatch)?'none':(showAll||idx<PROG_VISIBLE)?'':'none';
+      });
+      const moreBtn=day.querySelector('.prog-more');
+      if(moreBtn){
+        const hiddenCount=matching.length-PROG_VISIBLE;
+        moreBtn.style.display=(activeCat==='all'&&hiddenCount>0)?'flex':'none';
+        moreBtn.textContent=day.classList.contains('show-all')?'Zobrazit méně ↑':`Zobrazit další body programu (${hiddenCount}) ↓`;
+      }
+    });
+  }
   filterBtns.forEach(f=>f.addEventListener('click',()=>{
     filterBtns.forEach(x=>x.classList.remove('active'));
     f.classList.add('active');
-    const cat=f.dataset.cat;
-    document.querySelectorAll('.prog-item').forEach(item=>{
-      item.style.display=(cat==='all'||item.dataset.cat===cat)?'':'none';
-    });
+    applyProgramVisibility();
   }));
+  document.querySelectorAll('.prog-more').forEach(btn=>btn.addEventListener('click',()=>{
+    btn.closest('.prog-day').classList.toggle('show-all');
+    applyProgramVisibility();
+  }));
+  applyProgramVisibility();
 </script>
 </body>
 </html>
