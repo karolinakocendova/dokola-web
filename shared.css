@@ -317,3 +317,19 @@ footer{background:var(--ink);color:var(--cream);padding:40px 0;border-top:1px so
 .checklist .ci h4{font-size:1.02rem;margin-bottom:3px;font-family:"Bricolage Grotesque";font-weight:600}
 .checklist .ci p{font-size:.92rem;opacity:.82}
 @media(max-width:680px){.checklist{grid-template-columns:1fr}}
+
+/* ---------- COOKIE BANNER ---------- */
+#cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:200;max-width:640px;margin:0 auto;background:var(--cream);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px 18px;opacity:0;transform:translateY(12px);transition:.25s}
+#cookie-banner.open{opacity:1;transform:translateY(0)}
+.cb-inner{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.cb-inner p{font-size:.86rem;opacity:.85;flex:1;min-width:200px;margin:0}
+.cb-inner a{color:var(--teal-deep);text-decoration:underline}
+.cb-btns{display:flex;gap:8px;flex:none}
+.cb-btns button{font-family:"Archivo Narrow";font-weight:600;font-size:.86rem;padding:9px 16px;border-radius:100px;cursor:pointer;border:1.5px solid transparent;transition:.18s}
+.cb-reject{background:transparent;border-color:var(--ink);color:var(--ink)}
+.cb-reject:hover{background:var(--ink);color:var(--cream)}
+.cb-accept{background:var(--teal);color:#fff}
+.cb-accept:hover{background:var(--teal-deep)}
+@media(max-width:480px){#cookie-banner{left:10px;right:10px;bottom:10px;padding:14px}.cb-inner{flex-direction:column;align-items:stretch}.cb-btns{width:100%}.cb-btns button{flex:1}}
+
+.cookie-settings-link{cursor:pointer}
