@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEST — Pro koho to je</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Archivo+Narrow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .test-banner{background:#111;color:#fff;text-align:center;padding:10px;font-family:"Archivo Narrow";font-size:.85rem;letter-spacing:.04em}
+  .test-banner b{color:#FF9072}
+
+  /* ---- NEW: cílovky section — full-color "sticker" cards, ne bílé obdélníčky ---- */
+  .who{background:var(--cream);overflow:hidden}
+  .who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;padding-top:12px}
+  .who-card{position:relative;padding:30px 24px 26px;color:#fff;border-radius:38px 14px 38px 14px;transition:transform .25s,box-shadow .25s;box-shadow:0 14px 30px -18px rgba(12,40,38,.35)}
+  .who-grid .who-card:nth-child(odd){transform:rotate(-1.6deg)}
+  .who-grid .who-card:nth-child(even){transform:rotate(1.6deg)}
+  .who-card:hover{transform:rotate(0) translateY(-6px);box-shadow:0 26px 44px -20px rgba(12,40,38,.45)}
+  .who-icon{width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;font-size:1.55rem;margin-bottom:18px}
+  .who-card h3{font-size:1.22rem;margin-bottom:8px;color:#fff}
+  .who-card p.desc{font-size:.94rem;opacity:.92;margin-bottom:16px;color:#fff}
+  .who-tags{display:flex;flex-wrap:wrap;gap:6px}
+  .who-tags span{font-size:.76rem;font-weight:600;padding:5px 11px;border-radius:100px;background:rgba(255,255,255,.2);color:#fff}
+
+  .who-card.c-kids{background:#71A13E}
+  .who-card.c-learn{background:var(--orange)}
+  .who-card.c-make{background:var(--teal)}
+  .who-card.c-vibe{background:#E8568A}
+
+  @media(max-width:900px){.who-grid{grid-template-columns:1fr 1fr}}
+
+  /* mobil: carousel místo stacku, karty se slajdují a přichytávají na střed */
+  @media(max-width:560px){
+    .who-grid{
+      display:flex;
+      grid-template-columns:none;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      gap:14px;
+      margin:0 -20px;
+      padding:4px 20px 10px;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .who-grid::-webkit-scrollbar{display:none}
+    .who-grid .who-card{
+      flex:0 0 84%;
+      scroll-snap-align:center;
+      transform:none!important;
+    }
+  }
+  .who-dots{display:none;justify-content:center;gap:8px;margin-top:16px}
+  .who-dots span{width:7px;height:7px;border-radius:50%;background:var(--line);transition:.2s}
+  .who-dots span.active{background:var(--ink);transform:scale(1.4)}
+  @media(max-width:560px){.who-dots{display:flex}}
+</style>
+</head>
+<body>
+
+<div class="test-banner">🧪 <b>TESTOVACÍ STRÁNKA</b> — návrh nové sekce, není na produkci, nikde neprolinkovaná</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><img src="img/brand/dokola-logo-nav.png" alt="Festival Dokola"></a>
+    <button class="burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navlinks">
+      <a href="index.html#program">Program</a>
+      <a href="index.html#speakeri">Speakeři</a>
+      <a href="index.html#vstupenky">Registrace</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= VARIANTA: PRO KOHO TO JE ================= -->
+<section class="who">
+  <div class="wrap">
+    <div class="sec-head reveal in">
+      <span class="eyebrow">Ať tě zajímá cokoliv</span>
+      <h2>Najdi si to svoje</h2>
+      <p>Dva dny a bohatý program, ve kterém se pro každého se něco najde. Podle čeho si vybrat?</p>
+    </div>
+    <div class="who-grid">
+
+      <div class="who-card c-kids reveal in">
+        <div class="who-icon">🧒</div>
+        <h3>Pro nejmenší</h3>
+        <p class="desc">I ty nejmenší si tu na cirkularitu sáhnou vlastníma rukama a odnesou si nové znalosti.</p>
+        <div class="who-tags">
+          <span>Soutěž v třídění</span>
+          <span>Polytechnická dílna</span>
+          <span>Výroba seedbomb s Kokozou</span>
+          <span>Program pro školy</span>
+        </div>
+      </div>
+
+      <div class="who-card c-learn reveal in">
+        <div class="who-icon">🧠</div>
+        <h3>Chci se něco dozvědět</h3>
+        <p class="desc">Pozvali jsme skvělé řečnice a firmy, které mají co představit.</p>
+        <div class="who-tags">
+          <span>Přednášky</span>
+          <span>Debata: Je Praha cirkulární?</span>
+          <span>Výstava cirkulárních inovací</span>
+        </div>
+      </div>
+
+      <div class="who-card c-make reveal in">
+        <div class="who-icon">🛠️</div>
+        <h3>Chci si to vyzkoušet</h3>
+        <p class="desc">Vyrobíš, opravíš, vyměníš, upcykluješ a odneseš si to rovnou domů.</p>
+        <div class="who-tags">
+          <span>Workshopy</span>
+          <span>Otevřená dílna</span>
+          <span>Swap & Gratis market</span>
+          <span>Kimchi, nábytek, elektronika</span>
+        </div>
+      </div>
+
+      <div class="who-card c-vibe reveal in">
+        <div class="who-icon">✨</div>
+        <h3>Chci si to užít</h3>
+        <p class="desc">Standup, talkshow, přehlídka nebo přesazování kytek: festivalová atmosféra má spoustu podob.</p>
+        <div class="who-tags">
+          <span>Cirkulární standup</span>
+          <span>Talkshow</span>
+          <span>Módní přehlídka</span>
+          <span>Přesazování kytek</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="who-dots" aria-hidden="true"><span class="active"></span><span></span><span></span><span></span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <a href="index.html" class="brand brand-footer"><img src="img/brand/dokola-logo-footer.png" alt="Festival Dokola"></a>
+      <p class="foot-note">Testovací návrh sekce „Pro koho to je" · Festival Dokola 2026</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const b=document.getElementById('burger'),n=document.getElementById('navlinks');
+  b.addEventListener('click',()=>n.classList.toggle('open'));
+
+  const whoGrid=document.querySelector('.who-grid');
+  const whoCards=document.querySelectorAll('.who-card');
+  const whoDots=document.querySelectorAll('.who-dots span');
+  if(whoGrid && whoDots.length){
+    const dotIO=new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const idx=[...whoCards].indexOf(entry.target);
+          whoDots.forEach(d=>d.classList.remove('active'));
+          if(whoDots[idx]) whoDots[idx].classList.add('active');
+        }
+      });
+    },{root:whoGrid,threshold:.6});
+    whoCards.forEach(c=>dotIO.observe(c));
+  }
+</script>
+</body>
+</html>

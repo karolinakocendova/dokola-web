@@ -336,3 +336,49 @@ footer{background:var(--ink);color:var(--cream);padding:40px 0;border-top:1px so
 @media(max-width:480px){#cookie-banner{left:10px;right:10px;bottom:10px;padding:14px}.cb-inner{flex-direction:column;align-items:stretch}.cb-btns{width:100%}.cb-btns button{flex:1}}
 
 .cookie-settings-link{cursor:pointer}
+
+/* ---------- WHO / NAJDI SI TO SVOJE (cílovky) ---------- */
+.who{background:var(--cream);overflow:hidden;padding-bottom:36px}
+#co-se-bude-dit{padding-top:36px}
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;padding-top:12px}
+.who-card{position:relative;padding:30px 24px 26px;color:#fff;border-radius:38px 14px 38px 14px;transition:transform .25s,box-shadow .25s;box-shadow:0 14px 30px -18px rgba(12,40,38,.35)}
+.who-grid .who-card:nth-child(odd){transform:rotate(-1.6deg)}
+.who-grid .who-card:nth-child(even){transform:rotate(1.6deg)}
+.who-card:hover{transform:rotate(0) translateY(-6px);box-shadow:0 26px 44px -20px rgba(12,40,38,.45)}
+.who-icon{width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;font-size:1.55rem;margin-bottom:18px}
+.who-card h3{font-size:1.22rem;margin-bottom:8px;color:#fff}
+.who-card p.desc{font-size:.94rem;opacity:.92;margin-bottom:16px;color:#fff}
+.who-tags{display:flex;flex-wrap:wrap;gap:6px}
+.who-tags span{font-size:.76rem;font-weight:600;padding:5px 11px;border-radius:100px;background:rgba(255,255,255,.2);color:#fff}
+
+.who-card.c-kids{background:#71A13E}
+.who-card.c-learn{background:var(--orange)}
+.who-card.c-make{background:var(--teal)}
+.who-card.c-vibe{background:#E8568A}
+
+@media(max-width:900px){.who-grid{grid-template-columns:1fr 1fr}}
+
+/* mobil: carousel místo stacku, karty se slajdují a přichytávají na střed */
+@media(max-width:560px){
+  .who-grid{
+    display:flex;
+    grid-template-columns:none;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:14px;
+    margin:0 -20px;
+    padding:4px 20px 10px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .who-grid::-webkit-scrollbar{display:none}
+  .who-grid .who-card{
+    flex:0 0 84%;
+    scroll-snap-align:center;
+    transform:none!important;
+  }
+}
+.who-dots{display:none;justify-content:center;gap:8px;margin-top:16px}
+.who-dots span{width:7px;height:7px;border-radius:50%;background:var(--line);transition:.2s}
+.who-dots span.active{background:var(--ink);transform:scale(1.4)}
+@media(max-width:560px){.who-dots{display:flex}}
